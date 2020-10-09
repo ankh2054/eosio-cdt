@@ -18,9 +18,6 @@ ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1
 # Install required packages to add APT certifcate and APT REPOs
 RUN apt update && apt install --no-install-recommends -y wget 
 
-RUN wget  $SNAPSHOT_NAME
-# From the snapshot URL get the filename and extract
-RUN filename=$SNAPSHOT_NAME; tar xzvf "${filename##*/}"
 
 # Pull in build argument
 ARG CDT_BINARY

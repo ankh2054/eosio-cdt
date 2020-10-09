@@ -24,7 +24,7 @@ ARG CDT_BINARY
 # Download CDT DEB 
 RUN wget --no-check-certificate  $CDT_BINARY && \
 # From the CDT URL get the filename and install
-    filename=$CDT_BINARY; apt install "${filename##*/}"
+    filename=$CDT_BINARY; apt install ./"${filename##*/}"
 
 RUN mkdir -p /eos && \
     chown eos:eos eos/

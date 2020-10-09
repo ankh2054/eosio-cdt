@@ -32,6 +32,7 @@ RUN mkdir -p /eos && \
 WORKDIR /eos
 # Change to eos user
 USER eos
-
+ADD files/hello.cpp .
+RUN eosio-cpp hello.cpp -o hello.wasm
 
 CMD tail -f /dev/null

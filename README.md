@@ -29,3 +29,10 @@ docker build  git@github.com:ankh2054/eosio-cdt.git  \
 -t eosio-cdt.version \
 --build-arg CDT_BINARY=https://github.com/eosio/eosio.cdt/releases/download/v1.6.3/eosio.cdt_1.6.3-1-ubuntu-18.04_amd64.deb 
 ```
+
+
+**To run it:**
+
+```Dockerfile
+docker run  --name eosio-cdt.16.3  -d eosio-cdt.version:latest
+```

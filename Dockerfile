@@ -16,7 +16,7 @@ RUN groupadd --gid 1001 eos \
 ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1
 
 # Install required packages to add APT certifcate and APT REPOs
-RUN apt update && apt install --no-install-recommends -y wget git ssh-keygen
+RUN apt update && apt install --no-install-recommends -y wget git keychain
 
 
 # Pull in build argument

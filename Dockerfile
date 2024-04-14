@@ -16,7 +16,15 @@ RUN groupadd --gid 1001 eos \
 ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1
 
 # Install required packages to add APT certifcate and APT REPOs
-RUN apt update && apt install --no-install-recommends -y wget git keychain
+RUN apt update && apt install --no-install-recommends -y wget git keychain  \
+        clang                       \
+        clang-tidy                  \
+        cmake                       \
+        git                         \
+        libxml2-dev                 \
+        opam ocaml-interp           \
+        python3                     \
+        python3-pip  
 
 
 # Pull in build argument

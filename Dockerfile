@@ -1,5 +1,5 @@
 #Download base image ubuntu 20.04
-FROM ubuntu:22.04
+FROM ubuntu:20.04
 
 LABEL maintainer="charles@sentnl.io"
 LABEL version="1.0"
